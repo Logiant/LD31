@@ -22,10 +22,9 @@ public class StairScript : MonoBehaviour {
 	public void UseStairs(bool downward) {
 		Debug.Log ("Going Up");
 		if (downward) {
-			Debug.Log (bottom);
-			Debug.Log (top);
+			player.position = bottom.position;
 		} else {
-			Debug.Log (top);
+			player.position = top.position;
 		}
 	}
 }
