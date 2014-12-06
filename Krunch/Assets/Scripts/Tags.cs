@@ -7,5 +7,6 @@ public class Tags : MonoBehaviour {
 	public static string PenthouseKey = "PenthouseKey";
 	public static string RoofKey = "RoofKey";
 	public static string ChopperKey = "ChopperKey";
+	public static string Wallet = "Wallet";
 
 }
