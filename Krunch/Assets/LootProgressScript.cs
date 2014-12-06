@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class LootProgressScript : MonoBehaviour {
 	Transform rotForeground;
 	GameObject background1;
 	GameObject background2;
+
+	public Transform player;
+	public Text text;
 
 	float maxTime;
 	float time;
@@ -24,11 +28,13 @@ public class LootProgressScript : MonoBehaviour {
 				background1.SetActive(false);
 				background2.SetActive(false);
 			}
+			text.text = (Mathf.RoundToInt(time)+1) + "";
 		} else {
 			this.gameObject.SetActive (false);
 		}
 	}
 	public void Loot(float dt) {
+		transform.position = Camera.main.WorldToScreenPoint(new Vector3(player.position.x, player.position.y + 2, player.position.z));
 		maxTime = dt;
 		time = maxTime;
 		this.gameObject.SetActive (true);
