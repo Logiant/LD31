@@ -303,6 +303,34 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3bebf7cde2589647b417c830ee798b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &93551881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 93551882}
+  m_Layer: 0
+  m_Name: SpeechBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93551882
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 93551881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 642080987}
+  m_Father: {fileID: 1002651438}
+  m_RootOrder: 3
 --- !u!1 &113551999
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +692,10 @@ Prefab:
       propertyPath: m_Name
       value: bookshelf_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 654346245}
@@ -716,6 +748,10 @@ Prefab:
       propertyPath: m_Name
       value: dresser_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 1991420790}
@@ -1243,6 +1279,10 @@ Prefab:
       propertyPath: m_Name
       value: dresser_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 777192263}
@@ -1427,6 +1467,10 @@ Prefab:
       propertyPath: m_Name
       value: desk_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 956821236}
@@ -1553,6 +1597,10 @@ Prefab:
       propertyPath: m_Name
       value: bookshelf_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 1332498020}
@@ -1730,6 +1778,74 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3bebf7cde2589647b417c830ee798b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &608296348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 608296349}
+  - 222: {fileID: 608296351}
+  - 114: {fileID: 608296350}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &608296349
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608296348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 926670437}
+  m_RootOrder: 6
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -6.4000001, y: -1.60000002}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .0500000007, y: 0}
+--- !u!114 &608296350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608296348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .760784328, g: .760784328, b: .760784328, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: '3
+
+'
+--- !u!222 &608296351
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608296348}
 --- !u!1001 &610483256
 Prefab:
   m_ObjectHideFlags: 0
@@ -1777,6 +1893,10 @@ Prefab:
       propertyPath: m_Name
       value: desk_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 645531751}
@@ -1834,6 +1954,72 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!1 &642080986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 642080987}
+  - 222: {fileID: 642080989}
+  - 114: {fileID: 642080988}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &642080987
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 642080986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 93551882}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: -.100000001, y: .5}
+--- !u!114 &642080988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 642080986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .514807284, g: 1, b: .235294104, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Nothing..
+--- !u!222 &642080989
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 642080986}
 --- !u!1 &645531751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,6 +2672,10 @@ Prefab:
       propertyPath: m_Name
       value: bookshelf_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 1085213607}
@@ -2985,8 +3175,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 926670436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.2000122, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 394, y: 156, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 1828379516}
   - {fileID: 1012898016}
@@ -2994,6 +3184,7 @@ Transform:
   - {fileID: 113552000}
   - {fileID: 1539565364}
   - {fileID: 748156297}
+  - {fileID: 608296349}
   m_Father: {fileID: 1002651438}
   m_RootOrder: 1
 --- !u!114 &926670438
@@ -3007,6 +3198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9caf7889c468124f88b387a54af7d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2099626185}
+  text: {fileID: 608296350}
 --- !u!1001 &931361449
 Prefab:
   m_ObjectHideFlags: 0
@@ -3054,6 +3247,10 @@ Prefab:
       propertyPath: m_Name
       value: closet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 1026275376}
@@ -3106,6 +3303,10 @@ Prefab:
       propertyPath: m_Name
       value: desk_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 1395436859}
@@ -3333,7 +3534,6 @@ GameObject:
   - 223: {fileID: 1002651437}
   - 114: {fileID: 1002651436}
   - 114: {fileID: 1002651435}
-  - 114: {fileID: 1002651439}
   m_Layer: 5
   m_Name: GUI Root
   m_TagString: Untagged
@@ -3387,7 +3587,7 @@ Canvas:
   m_GameObject: {fileID: 1002651434}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3409,6 +3609,7 @@ RectTransform:
   - {fileID: 1012840437}
   - {fileID: 926670437}
   - {fileID: 1650519306}
+  - {fileID: 93551882}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
@@ -3416,17 +3617,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1002651439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1002651434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56211ca9ef64ff7438d5ced0f313acbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1012840436
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,6 +3866,10 @@ Prefab:
       propertyPath: m_Name
       value: closet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 920094283}
@@ -3728,6 +3922,10 @@ Prefab:
       propertyPath: m_Name
       value: dresser_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 376293759}
@@ -5010,6 +5208,10 @@ Prefab:
       propertyPath: m_Name
       value: dresser_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 362156101}
@@ -5062,6 +5264,10 @@ Prefab:
       propertyPath: m_Name
       value: desk_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 161077978}
@@ -5433,6 +5639,10 @@ Prefab:
       propertyPath: m_Name
       value: dresser_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 1857450717}
@@ -5485,6 +5695,10 @@ Prefab:
       propertyPath: m_Name
       value: bookshelf_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 544332898}
@@ -5589,6 +5803,10 @@ Prefab:
       propertyPath: m_Name
       value: bookshelf_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 959027113}
@@ -5816,6 +6034,10 @@ Prefab:
       propertyPath: m_Name
       value: closet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 423996987}
@@ -5948,6 +6170,10 @@ Prefab:
       propertyPath: m_Name
       value: closet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 229233345}
@@ -6485,6 +6711,10 @@ MonoBehaviour:
   chopperKey: 0
   roofKey: 0
   penthouseKey: 0
+  speechBubble: {fileID: 93551882}
+  speech: {fileID: 642080988}
+  speechDelay: .300000012
+  airTime: 1.75
 --- !u!1001 &2102548977
 Prefab:
   m_ObjectHideFlags: 0
@@ -6532,6 +6762,10 @@ Prefab:
       propertyPath: m_Name
       value: desk_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 1116489247}
@@ -6637,6 +6871,10 @@ Prefab:
       propertyPath: m_Name
       value: closet_01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 642080988}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 784999377}
