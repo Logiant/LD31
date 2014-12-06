@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LootableScript : MonoBehaviour {
 
+	LootProgressScript lootScript;
 	bool ready; 
 	public PlayerInventoryScript player;
 	public float lootTime = 2.5f;
@@ -10,12 +11,17 @@ public class LootableScript : MonoBehaviour {
 	float cooldown;
 	bool looting;
 
+	void Awake() {
+		lootScript = GameObject.Find ("LootBar").GetComponent<LootProgressScript>();
+	}
+
 	// Update is called once per frame
 	void Update () {
 		looting = looting && ready;
 		if (ready && Input.GetKeyUp (KeyCode.F) && !looting) {
 			looting = true;
 			cooldown = lootTime;
+			lootScript.Loot (lootTime);
 		}
 		if (looting) {
 			cooldown -= Time.deltaTime;
