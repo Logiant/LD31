@@ -562,6 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b854ce7c9fbb6304fa7831f6244bf986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  top: 0
 --- !u!61 &1293537669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -601,6 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b854ce7c9fbb6304fa7831f6244bf986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  top: 1
 --- !u!61 &1341015856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -750,6 +752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c3fa16647888f4a80736e2f8f4e9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2099626185}
 --- !u!1 &1616475661
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +853,10 @@ Prefab:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}

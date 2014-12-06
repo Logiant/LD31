@@ -3,6 +3,8 @@ using System.Collections;
 
 public class StairScript : MonoBehaviour {
 
+	public Transform player;
+	
 	Transform top;
 	Transform bottom;
 
