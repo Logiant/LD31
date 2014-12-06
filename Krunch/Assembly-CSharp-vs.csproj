@@ -51,8 +51,13 @@
      <Compile Include="Assets\Sample Assets\2D\Scripts\Platformer2DUserControl.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\PlatformerCharacter2D.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Restarter.cs" />
-     <Compile Include="Assets\StairScript.cs" />
-     <Compile Include="Assets\StairTriggerScript.cs" />
+     <Compile Include="Assets\Scripts\ChopperScript.cs" />
+     <Compile Include="Assets\Scripts\DoorScript.cs" />
+     <Compile Include="Assets\Scripts\LootableScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerInventoryScript.cs" />
+     <Compile Include="Assets\Scripts\StairScript.cs" />
+     <Compile Include="Assets\Scripts\StairTriggerScript.cs" />
+     <Compile Include="Assets\Scripts\Tags.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
