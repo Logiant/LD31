@@ -8,11 +8,12 @@ public class RevealFloorScript : MonoBehaviour {
 
 	void Awake() {
 		render = GetComponent<SpriteRenderer> ();
+		render.enabled = true;
 	}
 
 	void Update() {
 		if (visible) {
-			render.color = new Vector4 (render.color.r, render.color.g, render.color.b, render.color.a - 0.1f);
+			render.color = new Vector4 (render.color.r, render.color.g, render.color.b, render.color.a - 0.01f);
 			if (render.color.a <= 0.1)
 				Destroy(this.gameObject);
 		}
