@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class LootProgressScript : MonoBehaviour {
+	Transform rotForeground;
+	GameObject background1;
+	GameObject background2;
 
-	// Use this for initialization
-	void Start () {
-	
+	void Awake() {
+		rotForeground = this.transform.Find ("Foreground 1");
+		background1 = GameObject.Find ("Background 1");
+		background2 = GameObject.Find ("Background 2");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
