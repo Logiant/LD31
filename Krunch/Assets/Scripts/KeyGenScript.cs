@@ -17,13 +17,12 @@ public class KeyGenScript : MonoBehaviour {
 	 */
 	void Start () {
 		floors = this.GetComponentsInChildren<FloorScript> ();
-		int randPent = (int) Random.Range (2f, 4f); // floor for penhouse key
-
+		int randPent = Random.Range (2, 5); // floor for penhouse key
 		int chopper = 5; // floor for chopper key (always 5)
 
-		int randRoof = (int)Random.Range (2f, 4f); // floor for roof key
+		int randRoof = Random.Range (2, 5); // floor for roof key
 		while (randRoof == randPent) {
-			randRoof = (int)Random.Range (2f, 4f);
+			randRoof = Random.Range (2, 5);
 		}
 
 		for (int i = 0; i < floors.Length; i++) {
@@ -38,10 +37,5 @@ public class KeyGenScript : MonoBehaviour {
 				floors[i].AddLoot((GameObject) Instantiate(roofKey));
 			}
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

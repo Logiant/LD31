@@ -7,6 +7,7 @@ public class PlayerInventoryScript : MonoBehaviour {
 	public bool chopperKey;
 	public bool roofKey;
 	public bool penthouseKey;
+	public bool wallet;
 
 	public Transform speechBubble;
 	public Text speech;
@@ -25,6 +26,7 @@ public class PlayerInventoryScript : MonoBehaviour {
 			if (delay > 0) {
 				delay -= Time.deltaTime;
 			} else {
+				Debug.Log (text);
 				speech.text = text;
 				currentTime -= Time.deltaTime;
 			}
@@ -33,7 +35,15 @@ public class PlayerInventoryScript : MonoBehaviour {
 		}
 	}
 
+	public void Say(string msg) {
+		text = msg;
+		delay = speechDelay;
+		currentTime = airTime;
+		speechBubble.position = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z));
+	}
+
 	public void GiveItem(GameObject[] items) {
+		string msg = " ";
 		if (items.Length > 0) { //if we got items
 			//check for which item was recieved with a for loop and CompareTag
 			//create speech bubble, eg "This is the Penthouse key"
@@ -44,15 +54,16 @@ public class PlayerInventoryScript : MonoBehaviour {
 					roofKey = true;
 				}else if (items[i].CompareTag(Tags.PenthouseKey)){
 					penthouseKey = true;
+				} else if (items[i].CompareTag (Tags.Wallet)) {
+					wallet = true;
 				}
-				text = ("Got " + items[i].tag);
+				msg = ("Got " + items[i].tag);
 			}
 		} else { //no items found
 			//create speech bubble, eg "Nothing here..."
-			text = ("Nothing...");
+			msg = ("Nothing...");
 		}
-		delay = speechDelay;
-		currentTime = airTime;
-		speechBubble.position = Camera.main.WorldToScreenPoint(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z));
+		Debug.Log (msg);
+		Say (msg);
 	}
 }

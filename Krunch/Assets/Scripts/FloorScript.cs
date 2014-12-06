@@ -15,7 +15,7 @@ public class FloorScript : MonoBehaviour {
 
 	public void AddLoot(GameObject item){
 		// pick a lootable object to add the item to
-		int rand = (int)Random.Range (0f, lootables.Length - 1);
+		int rand = Random.Range (0, lootables.Length);
 		GameObject[] obj = {item};
 		// add item
 		lootables [rand].contained = obj;
