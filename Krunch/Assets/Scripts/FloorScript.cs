@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class FloorScript : MonoBehaviour {
-	GameObject[] lootables;
+	LootableScript[] lootables;
 	// Use this for initialization
-	void Start () {
-		//lootables = this.GetComponents<> ();
+	void Awake () {
+		lootables = this.GetComponentsInChildren<LootableScript> ();
 	}
 	
 	// Update is called once per frame
@@ -13,7 +13,11 @@ public class FloorScript : MonoBehaviour {
 	
 	}
 
-	public void AddLoot(string itemName){
-
+	public void AddLoot(GameObject item){
+		// pick a lootable object to add the item to
+		int rand = (int)Random.Range (0f, lootables.Length - 1);
+		GameObject[] obj = {item};
+		// add item
+		lootables [rand].contained = obj;
 	}
 }

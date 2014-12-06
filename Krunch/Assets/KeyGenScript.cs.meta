@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: 56211ca9ef64ff7438d5ced0f313acbe
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - chopperKey: {fileID: 100000, guid: 538a948359ae1ec4ca2be8dd11fc5b2f, type: 2}
+  - penthouseKey: {fileID: 100000, guid: ef766a48551a80d4e993f08d2280b68c, type: 2}
+  - roofKey: {fileID: 100000, guid: 4c3f8a85797c7084c9ee5dcdfadbc34d, type: 2}
+  - wallet: {fileID: 100000, guid: 931f1f02517b6c444940aa249502c1e6, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

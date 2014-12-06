@@ -3427,6 +3427,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56211ca9ef64ff7438d5ced0f313acbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chopperKey: {fileID: 0}
+  penthouseKey: {fileID: 0}
+  roofKey: {fileID: 0}
+  wallet: {fileID: 0}
 --- !u!1 &1012840436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4855,6 +4859,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56211ca9ef64ff7438d5ced0f313acbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chopperKey: {fileID: 100000, guid: 538a948359ae1ec4ca2be8dd11fc5b2f, type: 2}
+  penthouseKey: {fileID: 100000, guid: ef766a48551a80d4e993f08d2280b68c, type: 2}
+  roofKey: {fileID: 100000, guid: 4c3f8a85797c7084c9ee5dcdfadbc34d, type: 2}
+  wallet: {fileID: 100000, guid: 931f1f02517b6c444940aa249502c1e6, type: 2}
 --- !u!1 &1452084952
 GameObject:
   m_ObjectHideFlags: 0
