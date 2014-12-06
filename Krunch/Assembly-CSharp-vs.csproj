@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\KillYourselfScript.cs" />
      <Compile Include="Assets\Scripts\LootProgressScript.cs" />
      <Compile Include="Assets\Scripts\LootableScript.cs" />
+     <Compile Include="Assets\Scripts\MonsterScript.cs" />
      <Compile Include="Assets\Scripts\PlayerInventoryScript.cs" />
      <Compile Include="Assets\Scripts\RevealFloorScript.cs" />
      <Compile Include="Assets\Scripts\StairScript.cs" />
