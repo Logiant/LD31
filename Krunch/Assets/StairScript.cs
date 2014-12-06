@@ -10,8 +10,8 @@ public class StairScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		top = GameObject.Find ("HighPosition").transform;
-		bottom = GameObject.Find ("LowPosition").transform;
+		top = transform.Find ("HighPosition").transform;
+		bottom = transform.Find ("LowPosition").transform;
 	}
 	
 	// Update is called once per frame
@@ -20,11 +20,10 @@ public class StairScript : MonoBehaviour {
 	}
 
 	public void UseStairs(bool downward) {
-		Debug.Log ("Going Up");
 		if (downward) {
-			player.position = bottom.position;
+			player.position = new Vector3(bottom.position.x, bottom.position.y + 0.5f);
 		} else {
-			player.position = top.position;
+			player.position = new Vector3(top.position.x, top.position.y + 0.5f);
 		}
 	}
 }
