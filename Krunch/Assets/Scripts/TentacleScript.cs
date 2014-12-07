@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TentacleScript : MonoBehaviour {
 
-	bool punching;
+	public bool punching;
 	bool hit;
 	Vector3 targetLocation;
 	Vector3 returnLocation;

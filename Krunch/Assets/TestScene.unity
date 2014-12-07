@@ -1959,7 +1959,7 @@ GameObject:
   - 4: {fileID: 302430172}
   - 114: {fileID: 302430174}
   - 58: {fileID: 302430173}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tentacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2001,6 +2001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0c5b9bb6665c0438215f47ba83186e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punching: 0
   speed: 25
 --- !u!1 &303489281
 GameObject:
@@ -9791,6 +9792,8 @@ MonoBehaviour:
   - {fileID: 2068122128}
   - {fileID: 1498210915}
   stalkTime: 5
+  waitTime: .5
+  timeSinceWait: 0
   tentacle: {fileID: 0}
 --- !u!58 &1602951495
 CircleCollider2D:
