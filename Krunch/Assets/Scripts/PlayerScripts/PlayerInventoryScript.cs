@@ -26,7 +26,6 @@ public class PlayerInventoryScript : MonoBehaviour {
 			if (delay > 0) {
 				delay -= Time.deltaTime;
 			} else {
-				Debug.Log (text);
 				speech.text = text;
 				currentTime -= Time.deltaTime;
 			}
@@ -63,7 +62,6 @@ public class PlayerInventoryScript : MonoBehaviour {
 			//create speech bubble, eg "Nothing here..."
 			msg = ("Nothing...");
 		}
-		Debug.Log (msg);
 		Say (msg);
 	}
 }
