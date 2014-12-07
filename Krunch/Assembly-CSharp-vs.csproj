@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\StairScript.cs" />
      <Compile Include="Assets\Scripts\StairTriggerScript.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
+     <Compile Include="Assets\Scripts\TentacleScript.cs" />
      <Compile Include="Assets\Scripts\WinScripts\ChopperScript.cs" />
      <Compile Include="Assets\Scripts\WinScripts\KillYourselfScript.cs" />
  <Reference Include="UnityEngine.UI">

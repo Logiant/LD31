@@ -7,6 +7,8 @@ public class MonsterScript : MonoBehaviour {
 	public Transform[] floorPositions;
 	public float stalkTime = 5f; //time the monster waits if you disappear
 
+	public TentacleScript tentacle;
+
 	float cooldown;
 
 	Vector3 desiredPosition;
@@ -15,6 +17,7 @@ public class MonsterScript : MonoBehaviour {
 
 
 	void Awake() {
+		tentacle = GameObject.Find ("Tentacle").GetComponent<TentacleScript> ();
 		desiredPosition = transform.position;
 		eyePos = transform.FindChild ("Eyesight");
 	}
@@ -40,7 +43,7 @@ public class MonsterScript : MonoBehaviour {
 		//check if we are staring at the player
 		if (Mathf.Abs (transform.position.y - lastPlayerHeight) < 0.1f && hit.collider != null && hit.collider.CompareTag(Tags.Player)) { 
 			//PUNCH!
-			Debug.Log ("PUNCH");
+			tentacle.Punch(lastPlayerHeight);
 		}
 	}
 
