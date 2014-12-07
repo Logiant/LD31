@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\ChopperScript.cs" />
      <Compile Include="Assets\Scripts\DoorScript.cs" />
      <Compile Include="Assets\Scripts\FloorScript.cs" />
+     <Compile Include="Assets\Scripts\HideScript.cs" />
      <Compile Include="Assets\Scripts\KeyGenScript.cs" />
      <Compile Include="Assets\Scripts\KillYourselfScript.cs" />
      <Compile Include="Assets\Scripts\LootProgressScript.cs" />
