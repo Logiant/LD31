@@ -1949,6 +1949,59 @@ SpriteRenderer:
   m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: c7f9484a8769d6b4691b348cb1aad5bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &302430171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 302430172}
+  - 114: {fileID: 302430174}
+  - 58: {fileID: 302430173}
+  m_Layer: 0
+  m_Name: Tentacle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &302430172
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302430171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.5599995, y: 1.30999994, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 337579866}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+--- !u!58 &302430173
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302430171}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
+--- !u!114 &302430174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 302430171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0c5b9bb6665c0438215f47ba83186e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 25
 --- !u!1 &303489281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,11 +2149,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 337579864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.4300003, y: 1.50999999, z: 0}
+  m_LocalPosition: {x: 14.5, y: .25999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 302430172}
+  m_RootOrder: 0
 --- !u!1 &343980465
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,7 +3239,7 @@ Transform:
   m_LocalScale: {x: .717575788, y: .705468178, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!1 &548588248
 GameObject:
   m_ObjectHideFlags: 0
@@ -8555,7 +8608,7 @@ Transform:
   - {fileID: 2068122128}
   - {fileID: 1498210915}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!1 &1395436859
 GameObject:
   m_ObjectHideFlags: 0
@@ -9698,7 +9751,7 @@ GameObject:
   - 4: {fileID: 1602951493}
   - 58: {fileID: 1602951495}
   - 114: {fileID: 1602951494}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9718,7 +9771,7 @@ Transform:
   - {fileID: 1608882512}
   - {fileID: 52379906}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!114 &1602951494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9738,6 +9791,7 @@ MonoBehaviour:
   - {fileID: 2068122128}
   - {fileID: 1498210915}
   stalkTime: 5
+  tentacle: {fileID: 0}
 --- !u!58 &1602951495
 CircleCollider2D:
   m_ObjectHideFlags: 0

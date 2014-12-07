@@ -28,7 +28,7 @@ public class MonsterScript : MonoBehaviour {
 		RaycastHit2D hit;
 		hit = Physics2D.Raycast (new Vector2(eyePos.position.x, eyePos.position.y), new Vector2 (-1, 0), Mathf.Infinity);
 		if (hit.collider != null && hit.collider.CompareTag(Tags.Player)) {
-			lastPlayerHeight = transform.position.y;
+			lastPlayerHeight = hit.transform.position.y;
 			cooldown = stalkTime;
 		}
 		//if we are at our destination, chose a new course of action
@@ -43,8 +43,9 @@ public class MonsterScript : MonoBehaviour {
 		//check if we are staring at the player
 		if (Mathf.Abs (transform.position.y - lastPlayerHeight) < 0.1f && hit.collider != null && hit.collider.CompareTag(Tags.Player)) { 
 			//PUNCH!
-			tentacle.Punch(lastPlayerHeight);
+			tentacle.Punch(hit.transform.position.y);
 		}
+		tentacle.follow (new Vector3(eyePos.position.x + 8, eyePos.position.y));
 	}
 
 	void PickTarget() {
@@ -66,7 +67,7 @@ public class MonsterScript : MonoBehaviour {
 
 	void RandomMovement() {
 		int i = Random.Range (0, floorPositions.Length); //dont go to the bottom floor
-		desiredPosition = new Vector3 (transform.position.x, floorPositions[i].position.y - 4.5f, transform.position.z);
+		desiredPosition = new Vector3 (transform.position.x, floorPositions[i].position.y, transform.position.z);
 	}
 
 	void MoveToPlayer() { //placeholder method
