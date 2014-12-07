@@ -17,7 +17,10 @@ public class LootableScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		looting = looting && ready;
+		if (looting && !ready) {
+			looting = false;
+			lootScript.interrupt();
+		}
 		if (ready && Input.GetKeyUp (KeyCode.F) && !looting) {
 			looting = true;
 			cooldown = lootTime;

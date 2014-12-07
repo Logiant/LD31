@@ -33,6 +33,11 @@ public class LootProgressScript : MonoBehaviour {
 			this.gameObject.SetActive (false);
 		}
 	}
+
+	public void interrupt() {
+		time = 0;
+	}
+
 	public void Loot(float dt) {
 		transform.position = Camera.main.WorldToScreenPoint(new Vector3(player.position.x, player.position.y + 2, player.position.z));
 		maxTime = dt;
