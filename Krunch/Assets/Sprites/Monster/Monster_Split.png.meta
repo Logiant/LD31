@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: bf2d39bdecbd79d46b054b5e20f38af1
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Monster_Head
+    21300002: Monster_Neck
+    21300004: Monster_R_Arm_Upper
+    21300006: Monster_Torso
+    21300008: Monster_L_Arm_Upper
+    21300010: Monster_R_Arm_Lower
+    21300012: Monster_Waist
+    21300014: Monster_L_Arm_Lower
+    21300016: Monster_R_Hand
+    21300018: Monster_R_Thigh
+    21300020: Monster_L_Thigh
+    21300022: Monster_L_Hand
+    21300024: Monster_R_Calf
+    21300026: Monster_L_Calf
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Monster_Head
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 804
+        width: 62
+        height: 77
+      alignment: 9
+      pivot: {x: .559295654, y: .145325497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_Neck
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 736
+        width: 43
+        height: 39
+      alignment: 9
+      pivot: {x: .62213701, y: .257602781}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_R_Arm_Upper
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 569
+        width: 34
+        height: 117
+      alignment: 9
+      pivot: {x: .635152042, y: .833837807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_Torso
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 540
+        width: 122
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_L_Arm_Upper
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 611
+        width: 63
+        height: 116
+      alignment: 9
+      pivot: {x: .166546047, y: .8214522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_R_Arm_Lower
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 443
+        width: 51
+        height: 108
+      alignment: 9
+      pivot: {x: .650169194, y: .904205322}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_Waist
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 420
+        width: 103
+        height: 83
+      alignment: 9
+      pivot: {x: .395901889, y: .758363664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_L_Arm_Lower
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 459
+        width: 34
+        height: 120
+      alignment: 9
+      pivot: {x: .477474451, y: .902078271}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_R_Hand
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 344
+        width: 39
+        height: 79
+      alignment: 9
+      pivot: {x: .735650063, y: .926556528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_R_Thigh
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 245
+        width: 61
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_L_Thigh
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 222
+        width: 45
+        height: 165
+      alignment: 9
+      pivot: {x: .482980698, y: .931668162}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_L_Hand
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 343
+        width: 48
+        height: 84
+      alignment: 9
+      pivot: {x: .643599212, y: .88293165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_R_Calf
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 64
+        width: 52
+        height: 117
+      alignment: 9
+      pivot: {x: .293805629, y: .886204541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monster_L_Calf
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 63
+        width: 60
+        height: 114
+      alignment: 9
+      pivot: {x: .244712323, y: .829186976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
