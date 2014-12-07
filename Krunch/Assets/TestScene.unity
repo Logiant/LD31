@@ -372,6 +372,7 @@ MonoBehaviour:
   - {fileID: 2068122128}
   - {fileID: 1498210915}
   stalkTime: 5
+  tentacle: {fileID: 0}
 --- !u!212 &52379905
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2076,6 +2077,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 337579866}
   - 212: {fileID: 337579865}
+  - 114: {fileID: 337579867}
   m_Layer: 2
   m_Name: Tentacle
   m_TagString: Untagged
@@ -2117,6 +2119,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!114 &337579867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337579864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0c5b9bb6665c0438215f47ba83186e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &343980465
 GameObject:
   m_ObjectHideFlags: 0
