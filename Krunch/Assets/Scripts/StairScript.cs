@@ -19,6 +19,10 @@ public class StairScript : MonoBehaviour {
 		//if we are in transit, move the player. If we just finished, reenable the player
 	}
 
+	public void tutorial() {
+		player.GetComponent<PlayerInventoryScript> ().Say ("Press W and S to use stairs");
+	}
+
 	public void UseStairs(bool downward) { //called from child
 		if (downward) {
 			player.position = new Vector3(bottom.position.x, bottom.position.y + 0.5f); //set bool descending = true;
