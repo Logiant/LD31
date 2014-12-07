@@ -3,6 +3,8 @@ using System.Collections;
 
 public class HideScript : MonoBehaviour {
 	bool ready; 
+	bool hiding;
+	public GameObject player; // will become player controller once written
 	// Use this for initialization
 	void Start () {
 	
