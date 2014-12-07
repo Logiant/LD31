@@ -74,6 +74,33 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &19207144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 19207145}
+  m_Layer: 2
+  m_Name: Fourth Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &19207145
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19207144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390640842}
+  m_RootOrder: 3
 --- !u!1 &22484521
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +111,7 @@ GameObject:
   - 4: {fileID: 22484524}
   - 212: {fileID: 22484523}
   - 61: {fileID: 22484522}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +173,7 @@ GameObject:
   - 4: {fileID: 32834740}
   - 61: {fileID: 32834742}
   - 114: {fileID: 32834741}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HighPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +225,7 @@ GameObject:
   - 4: {fileID: 46731627}
   - 212: {fileID: 46731629}
   - 114: {fileID: 46731628}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Staircase_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,6 +327,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
   m_RootGameObject: {fileID: 301222437}
@@ -315,8 +346,8 @@ GameObject:
   - 4: {fileID: 52379906}
   - 212: {fileID: 52379905}
   - 114: {fileID: 52379904}
-  m_Layer: 0
-  m_Name: Munster
+  m_Layer: 2
+  m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,8 +364,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5eda02f0d367d4ea5b05ef1e0f99ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2099626185}
   speed: 5
+  floorPositions:
+  - {fileID: 1315595955}
+  - {fileID: 1879818992}
+  - {fileID: 19207145}
+  - {fileID: 2068122128}
+  - {fileID: 1498210915}
+  stalkTime: 5
 --- !u!212 &52379905
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -366,7 +403,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.6100006, y: 12.3699999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1608882512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1001 &58811532
@@ -416,6 +454,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
   m_RootGameObject: {fileID: 905958168}
@@ -429,7 +471,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 93551882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpeechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,6 +534,10 @@ Prefab:
       propertyPath: m_Name
       value: wall_03
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
   m_RootGameObject: {fileID: 1876877921}
@@ -506,7 +552,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 97644802}
   - 212: {fileID: 97644803}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: paintingB_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +604,7 @@ GameObject:
   - 224: {fileID: 113552000}
   - 222: {fileID: 113552002}
   - 114: {fileID: 113552001}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Foreground 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,6 +698,10 @@ Prefab:
       propertyPath: m_Name
       value: wall_02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
   m_RootGameObject: {fileID: 1013298693}
@@ -669,7 +719,7 @@ GameObject:
   - 92: {fileID: 139492610}
   - 124: {fileID: 139492609}
   - 81: {fileID: 139492608}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -750,7 +800,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 143039470}
   - 212: {fileID: 143039469}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wall_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +854,7 @@ GameObject:
   - 61: {fileID: 155274352}
   - 61: {fileID: 155274351}
   - 114: {fileID: 155274350}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -929,6 +979,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
   m_RootGameObject: {fileID: 380744743}
@@ -945,7 +999,7 @@ GameObject:
   - 212: {fileID: 161077982}
   - 61: {fileID: 161077981}
   - 114: {fileID: 161077980}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: desk_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1076,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 172919580}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1094,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!1 &175994389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1104,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 175994390}
   - 212: {fileID: 175994391}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: paintingA_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,6 +1201,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 654346245}
@@ -1207,6 +1265,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 1991420790}
@@ -1259,6 +1321,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 745654650}
@@ -1275,7 +1341,7 @@ GameObject:
   - 212: {fileID: 192388538}
   - 114: {fileID: 192388537}
   - 61: {fileID: 192388536}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_front_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1350,7 +1416,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 204777349}
   - 114: {fileID: 204777350}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,6 +1505,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 343980465}
@@ -1452,7 +1522,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 228736540}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Structure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1562,7 @@ GameObject:
   - 212: {fileID: 229233349}
   - 61: {fileID: 229233348}
   - 114: {fileID: 229233347}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: closet_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1570,7 +1640,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 253781695}
   - 212: {fileID: 253781694}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wallUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1620,7 +1690,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 265380254}
   - 212: {fileID: 265380255}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: table_04B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,6 +1779,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
   m_RootGameObject: {fileID: 1361976225}
@@ -1757,6 +1831,10 @@ Prefab:
       propertyPath: m_Name
       value: doorframe_roof
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 871297978}
@@ -1771,7 +1849,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 301222438}
   - 212: {fileID: 301222439}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TV_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1902,7 @@ GameObject:
   - 212: {fileID: 301989533}
   - 61: {fileID: 301989532}
   - 114: {fileID: 301989531}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fader_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1896,7 +1974,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 303489282}
   - 212: {fileID: 303489283}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: paintingB_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1947,7 +2025,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 320332094}
   - 212: {fileID: 320332093}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bed_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1998,7 +2076,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 337579866}
   - 212: {fileID: 337579865}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tentacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1 &343980465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +2128,7 @@ GameObject:
   - 212: {fileID: 343980469}
   - 114: {fileID: 343980468}
   - 61: {fileID: 343980467}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_front_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2116,47 +2194,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c4c8145326f635e43a8c6e478ca569fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &356942240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 356942241}
-  - 114: {fileID: 356942242}
-  m_Layer: 0
-  m_Name: Monster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &356942241
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356942240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.2600002, y: 12.6999998, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
---- !u!114 &356942242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356942240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5eda02f0d367d4ea5b05ef1e0f99ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2099626185}
-  speed: 5
 --- !u!1 &362156101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2205,7 @@ GameObject:
   - 212: {fileID: 362156105}
   - 61: {fileID: 362156104}
   - 114: {fileID: 362156103}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: dresser_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,7 +2312,7 @@ GameObject:
   - 212: {fileID: 376293763}
   - 61: {fileID: 376293762}
   - 114: {fileID: 376293761}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: dresser_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2353,7 +2390,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 380744744}
   - 212: {fileID: 380744745}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: paintingA_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2442,6 +2479,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
   m_RootGameObject: {fileID: 2057405770}
@@ -2502,6 +2543,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 777192263}
@@ -2518,7 +2563,7 @@ GameObject:
   - 212: {fileID: 423996991}
   - 61: {fileID: 423996990}
   - 114: {fileID: 423996989}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: closet_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2598,7 +2643,7 @@ GameObject:
   - 212: {fileID: 430953733}
   - 114: {fileID: 430953736}
   - 61: {fileID: 430953735}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2674,7 +2719,7 @@ GameObject:
   - 4: {fileID: 450254091}
   - 61: {fileID: 450254093}
   - 114: {fileID: 450254092}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LowPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2771,6 +2816,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 956821236}
@@ -2831,6 +2880,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 1332498020}
@@ -2844,7 +2897,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 503131429}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -2914,6 +2967,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d59791e62977a5442b9071d1fef5a7fe, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d59791e62977a5442b9071d1fef5a7fe, type: 2}
   m_RootGameObject: {fileID: 1875182806}
@@ -2966,6 +3023,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c4ded97974c8a294ab78fcd287b4b724, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4ded97974c8a294ab78fcd287b4b724, type: 2}
   m_RootGameObject: {fileID: 1649479730}
@@ -2982,7 +3043,7 @@ GameObject:
   - 212: {fileID: 548588249}
   - 114: {fileID: 548588252}
   - 61: {fileID: 548588251}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Helicopter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3055,7 +3116,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 551067262}
   - 212: {fileID: 551067263}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: fridge_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3144,6 +3205,10 @@ Prefab:
       propertyPath: m_Name
       value: doorframe_house
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 430953732}
@@ -3159,7 +3224,7 @@ GameObject:
   - 4: {fileID: 585288294}
   - 212: {fileID: 585288296}
   - 114: {fileID: 585288295}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Staircase_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3224,7 +3289,7 @@ GameObject:
   - 224: {fileID: 608296349}
   - 222: {fileID: 608296351}
   - 114: {fileID: 608296350}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,6 +3402,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 645531751}
@@ -3352,7 +3421,7 @@ GameObject:
   - 4: {fileID: 613740676}
   - 61: {fileID: 613740678}
   - 114: {fileID: 613740677}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HighPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3404,7 +3473,7 @@ GameObject:
   - 224: {fileID: 642080987}
   - 222: {fileID: 642080989}
   - 114: {fileID: 642080988}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3471,7 +3540,7 @@ GameObject:
   - 212: {fileID: 645531755}
   - 61: {fileID: 645531754}
   - 114: {fileID: 645531753}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: desk_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3551,7 +3620,7 @@ GameObject:
   - 212: {fileID: 654346249}
   - 61: {fileID: 654346248}
   - 114: {fileID: 654346247}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bookshelf_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3667,6 +3736,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 1990620030}
@@ -3683,7 +3756,7 @@ GameObject:
   - 212: {fileID: 745654652}
   - 114: {fileID: 745654654}
   - 61: {fileID: 745654653}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3759,7 +3832,7 @@ GameObject:
   - 224: {fileID: 748156297}
   - 222: {fileID: 748156296}
   - 114: {fileID: 748156295}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: LootProgressMeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3820,7 +3893,7 @@ GameObject:
   - 4: {fileID: 749815804}
   - 212: {fileID: 749815803}
   - 114: {fileID: 749815802}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Staircase_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3884,7 +3957,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 751263778}
   - 114: {fileID: 751263779}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3977,6 +4050,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
   m_RootGameObject: {fileID: 770202561}
@@ -4029,6 +4106,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
   m_RootGameObject: {fileID: 2009960234}
@@ -4043,7 +4124,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 769736113}
   - 212: {fileID: 769736114}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bed_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4094,7 +4175,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 770202562}
   - 212: {fileID: 770202563}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: fridge_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4147,7 +4228,7 @@ GameObject:
   - 212: {fileID: 777192267}
   - 61: {fileID: 777192266}
   - 114: {fileID: 777192265}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: dresser_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4227,7 +4308,7 @@ GameObject:
   - 212: {fileID: 784999381}
   - 61: {fileID: 784999380}
   - 114: {fileID: 784999379}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: closet_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4306,7 +4387,7 @@ GameObject:
   - 4: {fileID: 786719585}
   - 212: {fileID: 786719584}
   - 61: {fileID: 786719586}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4413,6 +4494,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 1085213607}
@@ -4461,6 +4546,10 @@ Prefab:
       propertyPath: m_Name
       value: doorframe_05
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 1929690431}
@@ -4476,7 +4565,7 @@ GameObject:
   - 4: {fileID: 817151419}
   - 212: {fileID: 817151418}
   - 61: {fileID: 817151420}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4537,7 +4626,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 820800905}
   - 212: {fileID: 820800904}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wall_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4589,7 +4678,7 @@ GameObject:
   - 4: {fileID: 835914366}
   - 61: {fileID: 835914368}
   - 114: {fileID: 835914367}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LowPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4678,6 +4767,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
   m_RootGameObject: {fileID: 910632700}
@@ -4692,7 +4785,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 848399928}
   - 212: {fileID: 848399927}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WallLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4732,7 +4825,7 @@ Transform:
   m_LocalScale: {x: 11, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!1 &856315310
 GameObject:
   m_ObjectHideFlags: 0
@@ -4742,7 +4835,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 856315311}
   - 212: {fileID: 856315312}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: fridge_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4794,7 +4887,7 @@ GameObject:
   - 4: {fileID: 861618020}
   - 212: {fileID: 861618019}
   - 61: {fileID: 861618021}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4857,7 +4950,7 @@ GameObject:
   - 212: {fileID: 871297979}
   - 114: {fileID: 871297982}
   - 61: {fileID: 871297981}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4935,7 +5028,7 @@ GameObject:
   - 61: {fileID: 879002826}
   - 61: {fileID: 879002825}
   - 114: {fileID: 879002824}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5023,7 +5116,7 @@ GameObject:
   - 4: {fileID: 884615092}
   - 61: {fileID: 884615094}
   - 114: {fileID: 884615093}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LowPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5076,7 +5169,7 @@ GameObject:
   - 212: {fileID: 894326984}
   - 61: {fileID: 894326983}
   - 114: {fileID: 894326982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fader_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5186,6 +5279,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
   m_RootGameObject: {fileID: 1812526490}
@@ -5200,7 +5297,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 905958169}
   - 212: {fileID: 905958170}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: paintingA_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5251,7 +5348,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 910632701}
   - 212: {fileID: 910632702}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: fridge_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5304,7 +5401,7 @@ GameObject:
   - 212: {fileID: 920094287}
   - 61: {fileID: 920094286}
   - 114: {fileID: 920094285}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: closet_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5416,6 +5513,10 @@ Prefab:
       propertyPath: m_Name
       value: wall_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
   m_RootGameObject: {fileID: 820800903}
@@ -5430,7 +5531,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 926670437}
   - 114: {fileID: 926670438}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LootBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5524,6 +5625,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 1026275376}
@@ -5584,6 +5689,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 1395436859}
@@ -5600,7 +5709,7 @@ GameObject:
   - 212: {fileID: 956821240}
   - 61: {fileID: 956821239}
   - 114: {fileID: 956821238}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: desk_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5680,7 +5789,7 @@ GameObject:
   - 212: {fileID: 959027117}
   - 61: {fileID: 959027116}
   - 114: {fileID: 959027115}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bookshelf_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5759,7 +5868,7 @@ GameObject:
   - 4: {fileID: 959754130}
   - 61: {fileID: 959754129}
   - 114: {fileID: 959754131}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Kill Yourself
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5809,7 +5918,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 989956331}
   - 212: {fileID: 989956332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bed_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5862,7 +5971,7 @@ GameObject:
   - 223: {fileID: 1002651437}
   - 114: {fileID: 1002651436}
   - 114: {fileID: 1002651435}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: GUI Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5992,6 +6101,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 1421758153}
@@ -6007,7 +6120,7 @@ GameObject:
   - 224: {fileID: 1012840437}
   - 222: {fileID: 1012840439}
   - 114: {fileID: 1012840438}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Fader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6068,7 +6181,7 @@ GameObject:
   - 224: {fileID: 1012898016}
   - 222: {fileID: 1012898018}
   - 114: {fileID: 1012898017}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Foreground 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6128,7 +6241,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1013298695}
   - 212: {fileID: 1013298694}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wall_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6181,7 +6294,7 @@ GameObject:
   - 212: {fileID: 1026275378}
   - 61: {fileID: 1026275377}
   - 114: {fileID: 1026275380}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: closet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6305,6 +6418,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 920094283}
@@ -6365,6 +6482,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 376293759}
@@ -6381,7 +6502,7 @@ GameObject:
   - 212: {fileID: 1085213611}
   - 61: {fileID: 1085213610}
   - 114: {fileID: 1085213609}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bookshelf_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6493,6 +6614,10 @@ Prefab:
       propertyPath: m_Name
       value: wall_04
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
   m_RootGameObject: {fileID: 143039468}
@@ -6509,7 +6634,7 @@ GameObject:
   - 212: {fileID: 1116489249}
   - 61: {fileID: 1116489248}
   - 114: {fileID: 1116489251}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: desk_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6625,6 +6750,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c4ded97974c8a294ab78fcd287b4b724, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4ded97974c8a294ab78fcd287b4b724, type: 2}
   m_RootGameObject: {fileID: 1798403370}
@@ -6639,7 +6768,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1123362491}
   - 114: {fileID: 1123362492}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6731,6 +6860,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
@@ -6784,6 +6917,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
@@ -6800,7 +6937,7 @@ GameObject:
   - 4: {fileID: 1152312457}
   - 212: {fileID: 1152312456}
   - 61: {fileID: 1152312458}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6863,7 +7000,7 @@ GameObject:
   - 212: {fileID: 1169668536}
   - 114: {fileID: 1169668538}
   - 61: {fileID: 1169668537}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pillar_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6976,6 +7113,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 1268373446}
@@ -7027,6 +7168,10 @@ Prefab:
     - target: {fileID: 21200000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
@@ -7080,6 +7225,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 54c5d4858291f1847a67f9b91c032416, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54c5d4858291f1847a67f9b91c032416, type: 2}
   m_RootGameObject: {fileID: 97644801}
@@ -7132,6 +7281,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 54c5d4858291f1847a67f9b91c032416, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54c5d4858291f1847a67f9b91c032416, type: 2}
   m_RootGameObject: {fileID: 303489281}
@@ -7148,7 +7301,7 @@ GameObject:
   - 212: {fileID: 1268373447}
   - 114: {fileID: 1268373450}
   - 61: {fileID: 1268373449}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_penthouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7224,7 +7377,7 @@ GameObject:
   - 4: {fileID: 1293537667}
   - 61: {fileID: 1293537669}
   - 114: {fileID: 1293537668}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LowPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7276,7 +7429,7 @@ GameObject:
   - 4: {fileID: 1299651204}
   - 61: {fileID: 1299651203}
   - 114: {fileID: 1299651202}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HighPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7327,7 +7480,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1314868062}
   - 212: {fileID: 1314868061}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: fridge_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7369,6 +7522,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 204777349}
   m_RootOrder: 4
+--- !u!1 &1315595954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1315595955}
+  m_Layer: 2
+  m_Name: Second Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1315595955
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315595954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390640842}
+  m_RootOrder: 1
 --- !u!1001 &1320493399
 Prefab:
   m_ObjectHideFlags: 0
@@ -7415,6 +7595,10 @@ Prefab:
     - target: {fileID: 21200000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
@@ -7468,6 +7652,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
@@ -7485,7 +7673,7 @@ GameObject:
   - 212: {fileID: 1332498024}
   - 61: {fileID: 1332498023}
   - 114: {fileID: 1332498022}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bookshelf_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7564,7 +7752,7 @@ GameObject:
   - 4: {fileID: 1341015857}
   - 61: {fileID: 1341015856}
   - 114: {fileID: 1341015855}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HighPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7615,7 +7803,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1361976226}
   - 212: {fileID: 1361976227}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: table_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7704,6 +7892,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
   m_RootGameObject: {fileID: 1314868060}
@@ -7755,6 +7947,10 @@ Prefab:
     - target: {fileID: 21200000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
@@ -7808,6 +8004,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 54c5d4858291f1847a67f9b91c032416, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54c5d4858291f1847a67f9b91c032416, type: 2}
   m_RootGameObject: {fileID: 1635605096}
@@ -7823,7 +8023,7 @@ GameObject:
   - 4: {fileID: 1371563904}
   - 212: {fileID: 1371563906}
   - 61: {fileID: 1371563905}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7884,7 +8084,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1378665214}
   - 114: {fileID: 1378665215}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7939,7 +8139,7 @@ GameObject:
   - 4: {fileID: 1385152053}
   - 212: {fileID: 1385152052}
   - 61: {fileID: 1385152054}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8000,7 +8200,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1386108712}
   - 212: {fileID: 1386108713}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bed_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8042,6 +8242,39 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f5641571dbf230b468eda78952cdc9a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1390640841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1390640842}
+  m_Layer: 2
+  m_Name: MonsterPositions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1390640842
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1390640841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.2299995, y: -1.96000004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1724416096}
+  - {fileID: 1315595955}
+  - {fileID: 1879818992}
+  - {fileID: 19207145}
+  - {fileID: 2068122128}
+  - {fileID: 1498210915}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
 --- !u!1 &1395436859
 GameObject:
   m_ObjectHideFlags: 0
@@ -8053,7 +8286,7 @@ GameObject:
   - 212: {fileID: 1395436862}
   - 61: {fileID: 1395436861}
   - 114: {fileID: 1395436860}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: desk_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8132,7 +8365,7 @@ GameObject:
   - 4: {fileID: 1399656746}
   - 212: {fileID: 1399656745}
   - 114: {fileID: 1399656747}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Staircase_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8234,6 +8467,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
   m_RootGameObject: {fileID: 1927833840}
@@ -8286,6 +8523,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
   m_RootGameObject: {fileID: 1446184836}
@@ -8302,7 +8543,7 @@ GameObject:
   - 212: {fileID: 1421758155}
   - 114: {fileID: 1421758157}
   - 61: {fileID: 1421758156}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8378,7 +8619,7 @@ GameObject:
   - 224: {fileID: 1434364367}
   - 222: {fileID: 1434364369}
   - 114: {fileID: 1434364368}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Background 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8438,7 +8679,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1441141521}
   - 114: {fileID: 1441141522}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8524,6 +8765,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 733e38282cab0174ea4e7f95c560ac95, type: 2}
   m_RootGameObject: {fileID: 265380253}
@@ -8538,7 +8783,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1446184837}
   - 212: {fileID: 1446184838}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TV_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8589,7 +8834,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1452084953}
   - 114: {fileID: 1452084954}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8643,7 +8888,7 @@ GameObject:
   - 4: {fileID: 1468156391}
   - 212: {fileID: 1468156393}
   - 61: {fileID: 1468156392}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8750,11 +8995,42 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 362156101}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1498210914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1498210915}
+  m_Layer: 2
+  m_Name: Sixth Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498210915
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498210914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390640842}
+  m_RootOrder: 5
 --- !u!1001 &1517800104
 Prefab:
   m_ObjectHideFlags: 0
@@ -8810,6 +9086,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 161077978}
@@ -8862,6 +9142,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
@@ -8878,7 +9162,7 @@ GameObject:
   - 224: {fileID: 1539565364}
   - 222: {fileID: 1539565366}
   - 114: {fileID: 1539565365}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Background 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8940,7 +9224,7 @@ GameObject:
   - 212: {fileID: 1550176732}
   - 61: {fileID: 1550176731}
   - 114: {fileID: 1550176730}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fader_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9012,7 +9296,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1557647929}
   - 212: {fileID: 1557647930}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TV_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9054,6 +9338,33 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 322efb9a6b789de45b9233722079d205, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1608882511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1608882512}
+  m_Layer: 2
+  m_Name: Eyesight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608882512
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608882511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.70000005, y: 5.11000013, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 52379906}
+  m_RootOrder: 0
 --- !u!1 &1616475661
 GameObject:
   m_ObjectHideFlags: 0
@@ -9064,7 +9375,7 @@ GameObject:
   - 4: {fileID: 1616475663}
   - 212: {fileID: 1616475662}
   - 61: {fileID: 1616475664}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9125,7 +9436,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1624041583}
   - 212: {fileID: 1624041584}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TV_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9176,7 +9487,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1635605097}
   - 212: {fileID: 1635605098}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: paintingB_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9229,7 +9540,7 @@ GameObject:
   - 212: {fileID: 1649479732}
   - 114: {fileID: 1649479734}
   - 61: {fileID: 1649479733}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pillar_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9307,7 +9618,7 @@ GameObject:
   - 61: {fileID: 1649671049}
   - 61: {fileID: 1649671048}
   - 114: {fileID: 1649671047}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9396,7 +9707,7 @@ GameObject:
   - 114: {fileID: 1650519305}
   - 114: {fileID: 1650519304}
   - 114: {fileID: 1650519303}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9513,6 +9824,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9522e32c1b3d31940b09d5c976c64b5c, type: 2}
   m_RootGameObject: {fileID: 1857450717}
@@ -9565,6 +9880,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4e728e1fa4b26245b1e3f58e63ba40c, type: 2}
   m_RootGameObject: {fileID: 175994389}
@@ -9579,7 +9898,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1705251529}
   - 212: {fileID: 1705251530}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TV_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9662,17 +9981,52 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
   m_RootGameObject: {fileID: 2099626184}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1724416095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1724416096}
+  m_Layer: 2
+  m_Name: First Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724416096
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1724416095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390640842}
+  m_RootOrder: 0
 --- !u!1001 &1733701305
 Prefab:
   m_ObjectHideFlags: 0
@@ -9728,6 +10082,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f26c617fcc853a4a9f591f99f06deed, type: 2}
   m_RootGameObject: {fileID: 959027113}
@@ -9742,7 +10100,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1740282247}
   - 212: {fileID: 1740282246}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wall_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9795,7 +10153,7 @@ GameObject:
   - 212: {fileID: 1753139139}
   - 114: {fileID: 1753139138}
   - 61: {fileID: 1753139137}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_front_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9908,6 +10266,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac9a576104bd5e147bfea3e3c18c8789, type: 2}
   m_RootGameObject: {fileID: 1557647928}
@@ -9923,7 +10285,7 @@ GameObject:
   - 4: {fileID: 1792900931}
   - 61: {fileID: 1792900933}
   - 114: {fileID: 1792900932}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LowPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9975,7 +10337,7 @@ GameObject:
   - 4: {fileID: 1797310591}
   - 212: {fileID: 1797310590}
   - 61: {fileID: 1797310589}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10038,7 +10400,7 @@ GameObject:
   - 212: {fileID: 1798403372}
   - 114: {fileID: 1798403374}
   - 61: {fileID: 1798403373}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pillar_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10113,7 +10475,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1812526491}
   - 212: {fileID: 1812526492}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: table_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10165,7 +10527,7 @@ GameObject:
   - 224: {fileID: 1828379516}
   - 222: {fileID: 1828379518}
   - 114: {fileID: 1828379517}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Background 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10271,6 +10633,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 423996987}
@@ -10287,7 +10653,7 @@ GameObject:
   - 212: {fileID: 1857450719}
   - 61: {fileID: 1857450718}
   - 114: {fileID: 1857450721}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: dresser_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10411,6 +10777,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
   m_RootGameObject: {fileID: 229233345}
@@ -10425,7 +10795,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1875182808}
   - 212: {fileID: 1875182807}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10476,7 +10846,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1876877923}
   - 212: {fileID: 1876877922}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: wall_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10527,7 +10897,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1877675970}
   - 212: {fileID: 1877675971}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bed_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10569,6 +10939,33 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f5641571dbf230b468eda78952cdc9a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1879818991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1879818992}
+  m_Layer: 2
+  m_Name: Third Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1879818992
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879818991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390640842}
+  m_RootOrder: 2
 --- !u!1001 &1880937859
 Prefab:
   m_ObjectHideFlags: 0
@@ -10615,6 +11012,10 @@ Prefab:
     - target: {fileID: 21200000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa545d13c8867404691a2092f50061a5, type: 2}
@@ -10668,6 +11069,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 0989deb236a66904ab586304e3ad1ad4, type: 2}
@@ -10683,7 +11088,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1927833841}
   - 212: {fileID: 1927833842}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: table_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10736,7 +11141,7 @@ GameObject:
   - 212: {fileID: 1929690433}
   - 114: {fileID: 1929690435}
   - 61: {fileID: 1929690434}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10845,6 +11250,10 @@ Prefab:
       propertyPath: m_Name
       value: doorframe_front_04
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 1753139135}
@@ -10860,7 +11269,7 @@ GameObject:
   - 4: {fileID: 1963238955}
   - 61: {fileID: 1963238954}
   - 114: {fileID: 1963238953}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HighPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10945,6 +11354,10 @@ Prefab:
       propertyPath: m_Name
       value: wall_05
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f45cc5bdb82507c499f374a4b3b16704, type: 2}
   m_RootGameObject: {fileID: 1740282245}
@@ -10993,6 +11406,10 @@ Prefab:
       propertyPath: m_Name
       value: pillar_03
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c4ded97974c8a294ab78fcd287b4b724, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4ded97974c8a294ab78fcd287b4b724, type: 2}
   m_RootGameObject: {fileID: 1169668534}
@@ -11008,7 +11425,7 @@ GameObject:
   - 4: {fileID: 1989999868}
   - 212: {fileID: 1989999870}
   - 114: {fileID: 1989999869}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Staircase_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11074,7 +11491,7 @@ GameObject:
   - 212: {fileID: 1990620032}
   - 114: {fileID: 1990620034}
   - 61: {fileID: 1990620033}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorframe_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11151,7 +11568,7 @@ GameObject:
   - 212: {fileID: 1991420794}
   - 61: {fileID: 1991420793}
   - 114: {fileID: 1991420792}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: dresser_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11229,7 +11646,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2009960235}
   - 212: {fileID: 2009960236}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: paintingA_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11280,7 +11697,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2057405771}
   - 212: {fileID: 2057405772}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: table_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11322,6 +11739,33 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d89aeb786217a34499402e01e966063a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2068122127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2068122128}
+  m_Layer: 2
+  m_Name: Fifth Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068122128
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068122127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1390640842}
+  m_RootOrder: 4
 --- !u!1 &2075607019
 GameObject:
   m_ObjectHideFlags: 0
@@ -11333,7 +11777,7 @@ GameObject:
   - 212: {fileID: 2075607023}
   - 61: {fileID: 2075607022}
   - 114: {fileID: 2075607021}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fader_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11443,6 +11887,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1238160668a561f4d87508f65de6813e, type: 2}
   m_RootGameObject: {fileID: 192388534}
@@ -11464,7 +11912,7 @@ GameObject:
   - 114: {fileID: 2099626187}
   - 61: {fileID: 2099626186}
   - 114: {fileID: 2099626193}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: 2D Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -11669,6 +12117,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021d6bb0ae8d54543988065bb3c10214, type: 2}
   m_RootGameObject: {fileID: 1116489247}
@@ -11728,6 +12180,10 @@ Prefab:
     - target: {fileID: 21200000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08e18cd2af3bb042a164afd7559be49, type: 2}
