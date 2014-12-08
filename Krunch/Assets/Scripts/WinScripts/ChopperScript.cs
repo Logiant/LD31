@@ -6,15 +6,22 @@ public class ChopperScript : MonoBehaviour {
 
 	public PlayerInventoryScript player;
 	bool ready;
+	FaderScript fader;
+
+	void Start(){
+		fader = GameObject.Find("Fader").GetComponent<FaderScript>();
+	}
 
 	void Update() {
 		if (Input.GetKeyDown (KeyCode.F) && ready) { //if we are ready to be used and action is pressed
 			if (player.chopperKey) { //if the player has the chopper key
 				Destroy(player.gameObject); //put the player in the chopper and fly
-				//you win! fade the screen out and restart
-				Application.LoadLevel (0); //reload
+				//you win! fade the screen out
+				fader.FadeOut();
 			}
 		}
+		if(fader.gameOver) // if the fader has fully faded out
+			Application.LoadLevel (0); //reload
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {

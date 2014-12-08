@@ -52,6 +52,7 @@
      <Compile Include="Assets\Sample Assets\2D\Scripts\PlatformerCharacter2D.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Restarter.cs" />
      <Compile Include="Assets\Scripts\DoorScript.cs" />
+     <Compile Include="Assets\Scripts\FaderScript.cs" />
      <Compile Include="Assets\Scripts\Level Setup Scripts\FloorScript.cs" />
      <Compile Include="Assets\Scripts\Level Setup Scripts\KeyGenScript.cs" />
      <Compile Include="Assets\Scripts\LootableScript.cs" />
