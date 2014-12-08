@@ -9,6 +9,8 @@ public class TentacleScript : MonoBehaviour {
 	Vector3 returnLocation;
 	public float speed = 5;
 
+	float range = -8.25f;
+
 
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D other) {
@@ -21,7 +23,8 @@ public class TentacleScript : MonoBehaviour {
 		Vector3 distance;
 		if (punching) { // if punching
 			distance = targetLocation - transform.position;
-			float velocity = Mathf.Min (distance.magnitude * Time.deltaTime, speed * Time.deltaTime);
+			float velocity = Mathf.Min (distance.magnitude, speed * Time.deltaTime);
+			Debug.Log (distance.magnitude + " " + speed + " " +velocity);
 			transform.position += (velocity * distance.normalized);
 			if((targetLocation - transform.position).sqrMagnitude <= 0.1f && !hit){
 				targetLocation = returnLocation;
@@ -42,10 +45,10 @@ public class TentacleScript : MonoBehaviour {
 		}
 	}
 
-	public void Punch(float height){
-		if(!punching){
+	public void Punch(Vector3 target){
+		if(!punching && target.x > range){
 			punching = true;
-			targetLocation = new Vector3 (-8.25f,height, 0);
+			targetLocation = new Vector3 (range,target.y, 0);
 			returnLocation = this.transform.position;
 		}
 	}

@@ -6,8 +6,11 @@ public class MonsterScript : MonoBehaviour {
 	public float speed = 1;	
 	public Transform[] floorPositions;
 	public float stalkTime = 5f; //time the monster waits if you disappear
-	public float waitTime = .5f; // time to wait after seeing player
+	public float waitMin = .5f; // min time to wait after seeing player
+	public float waitMax = 1.5f; // min time to wait after seeing player
 	public float timeSinceWait = 0;
+
+	float waitTime; // generated time to wait after seeing player
 
 	bool seen;
 	bool hasTarget;
@@ -64,7 +67,7 @@ public class MonsterScript : MonoBehaviour {
 			cooldown += Time.deltaTime;
 			// if enough time has passed and target is still there punch it
 			if(timeSinceWait >= waitTime && hit.collider != null && hit.collider.CompareTag(Tags.Player)){
-				tentacle.Punch(hit.transform.position.y);
+				tentacle.Punch(hit.transform.position);
 			} else if (timeSinceWait >= waitTime && cooldown >= stalkTime && !tentacle.punching){
 				seen = false;
 				hasTarget = false;
@@ -74,6 +77,7 @@ public class MonsterScript : MonoBehaviour {
 
 	// pick a target to go to
 	void PickTarget() {
+		waitTime = Random.Range(waitMin,waitMax);
 		int i = Random.Range (0, floorPositions.Length); //dont go to the bottom floor
 		desiredPosition = new Vector3 (transform.position.x, floorPositions[i].position.y, transform.position.z);
 	}
