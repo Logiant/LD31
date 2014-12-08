@@ -25,10 +25,10 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate () {
 		float velocity = 0;
 		if (looting) {
-
+			// looting animation
 
 		} else if (hidden) {
-
+			// hidden animation
 
 	//	} else if (climbing) {
 
