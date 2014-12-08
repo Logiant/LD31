@@ -5,14 +5,18 @@ public class StairTriggerScript : MonoBehaviour {
 
 	public bool top; //is this the top of a staircase?
 
-	static bool first = true;
-
 	bool ready; //is the player in the trigger zone?
 
 	StairScript parent;
+	GameObject stairMenu;
 
 	void Awake() {
 		parent = GetComponentInParent<StairScript> (); //get the parent which moves the player
+		stairMenu = GameObject.Find ("StairMenu");
+	}
+
+	void Start(){
+		//stairMenu.SetActive (false);
 	}
 
 	void Update() {
@@ -27,16 +31,15 @@ public class StairTriggerScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Player")) {
 			ready = true;
-			if (first) { //the first time you enter
-				parent.tutorial();
-				first = false;
-			}
+			//stairMenu.SetActive(true);
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.CompareTag("Player")) {
 			ready = false;
+			//stairMenu.SetActive(false);
 		}
+
 	}
 }

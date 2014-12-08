@@ -10,9 +10,15 @@ public class LootableScript : MonoBehaviour {
 	public GameObject[] contained;
 	float cooldown;
 	bool looting;
+	GameObject lootMenu;
 
 	void Awake() {
 		lootScript = GameObject.Find ("LootBar").GetComponent<LootProgressScript>();
+		lootMenu = GameObject.Find ("LootMenu");
+	}
+
+	void Start(){
+		lootMenu.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -39,12 +45,16 @@ public class LootableScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
-		if (other.CompareTag (Tags.Player))
-						ready = true;
+		if (other.CompareTag (Tags.Player)){
+			ready = true;
+			lootMenu.SetActive(true);
+		}
 	}
 
 	void OnTriggerExit2D (Collider2D other){
-		if (other.CompareTag (Tags.Player))
+		if (other.CompareTag (Tags.Player)){
 			ready = false;
+			lootMenu.SetActive(false);
+		}
 	}
 }

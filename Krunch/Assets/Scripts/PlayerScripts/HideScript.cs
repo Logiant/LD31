@@ -7,10 +7,17 @@ public class HideScript : MonoBehaviour {
 	bool hiding;
 	public GameObject player; // will become player controller once written
 
+	GameObject hideMenu;
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 	//potentially things with player
 		player = GameObject.Find ("2D Character");
+		hideMenu = GameObject.Find ("HideMenu");
+	}
+
+	void Start(){
+		hideMenu.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -36,12 +43,16 @@ public class HideScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
-		if (other.CompareTag (Tags.Player)) // if player enters hide area toggle ready to true
+		if (other.CompareTag (Tags.Player)){ // if player enters hide area toggle ready to true
 			ready = true;
+			hideMenu.SetActive(true);
+		}
 	}
 	
 	void OnTriggerExit2D (Collider2D other){
-		if (other.CompareTag (Tags.Player)) // if player leave hide area toggle ready to false
+		if (other.CompareTag (Tags.Player)){ // if player leave hide area toggle ready to false
 			ready = false;
+			hideMenu.SetActive(false);
+		}
 	}
 }
