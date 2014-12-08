@@ -16,7 +16,6 @@ public class TentacleScript : MonoBehaviour {
 			Application.LoadLevel(0);
 		}
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		Vector3 distance;
@@ -30,6 +29,7 @@ public class TentacleScript : MonoBehaviour {
 				Debug.Log ("hit");
 			}else if ((targetLocation - transform.position).sqrMagnitude <=	0.1f && hit){
 				punching = false;
+				hit = false;
 				Debug.Log ("Tentacle returned");
 			}
 		}
@@ -45,7 +45,7 @@ public class TentacleScript : MonoBehaviour {
 	public void Punch(float height){
 		if(!punching){
 			punching = true;
-			targetLocation = new Vector3 (-8,height, 0);
+			targetLocation = new Vector3 (-8.25f,height, 0);
 			returnLocation = this.transform.position;
 		}
 	}

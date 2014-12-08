@@ -46,14 +46,14 @@ public class MonsterScript : MonoBehaviour {
 				distance = desiredPosition - transform.position;
 				float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed * Time.deltaTime);
 				transform.position += (vel * distance.normalized);
-				tentacle.follow (new Vector3(eyePos.position.x + 8, eyePos.position.y));
+				tentacle.follow (new Vector3(eyePos.position.x + 15, eyePos.position.y));
 				hasTarget = true;
 			}else{ // if not hit and has target
 				distance = desiredPosition - transform.position; // get distance
 				if(!(distance.sqrMagnitude <= 0.1)){ // if not at target, keep moving
 					float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed * Time.deltaTime);
 					transform.position += (vel * distance.normalized);
-					tentacle.follow (new Vector3(eyePos.position.x + 8, eyePos.position.y));
+					tentacle.follow (new Vector3(eyePos.position.x + 15, eyePos.position.y));
 				}else{ // else start cooldown and set has target to false
 					hasTarget = false;
 					cooldown = stalkTime;
