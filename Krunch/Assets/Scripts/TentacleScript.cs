@@ -24,7 +24,6 @@ public class TentacleScript : MonoBehaviour {
 		if (punching) { // if punching
 			distance = targetLocation - transform.position;
 			float velocity = Mathf.Min (distance.magnitude, speed * Time.deltaTime);
-			Debug.Log (distance.magnitude + " " + speed + " " +velocity);
 			transform.position += (velocity * distance.normalized);
 			if((targetLocation - transform.position).sqrMagnitude <= 0.1f && !hit){
 				targetLocation = returnLocation;
