@@ -8,10 +8,12 @@ public class ChopperScript : MonoBehaviour {
 	TentacleScript tentacle;
 	bool ready;
 	FaderScript fader;
+	ParticleSystem system;
 
 	void Start(){
 		fader = GameObject.Find("Fader").GetComponent<FaderScript>();
 		tentacle = GameObject.Find ("Tentacle").GetComponent <TentacleScript> ();
+		system = this.GetComponent<ParticleSystem>();
 	}
 
 	void Update() {
