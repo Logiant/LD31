@@ -56,7 +56,7 @@ public class PlayerInventoryScript : MonoBehaviour {
 				} else if (items[i].CompareTag (Tags.Wallet)) {
 					wallet = true;
 				}
-				msg = ("Got " + items[i].tag);
+				msg = ("Got " + items[i].tag+".");
 			}
 		} else { //no items found
 			//create speech bubble, eg "Nothing here..."
