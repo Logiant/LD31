@@ -20,8 +20,6 @@ public class ChopperScript : MonoBehaviour {
 				fader.FadeOut();
 			}
 		}
-		if(fader.gameOver) // if the fader has fully faded out
-			Application.LoadLevel (0); //reload
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {

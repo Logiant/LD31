@@ -1,15 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FaderScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MonsterScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\RevealFloorScript.cs" Line="28" Column="1" />
-      <File FileName="Assets\Scripts\WinScripts\ChopperScript.cs" Line="23" Column="57" />
-      <File FileName="Assets\Scripts\WinScripts\KillYourselfScript.cs" Line="7" Column="3" />
-      <File FileName="Assets\Scripts\FaderScript.cs" Line="7" Column="15" />
+      <File FileName="Assets\Scripts\FaderScript.cs" Line="33" Column="5" />
+      <File FileName="Assets\Scripts\RevealFloorScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WinScripts\ChopperScript.cs" Line="22" Column="4" />
+      <File FileName="Assets\Scripts\WinScripts\KillYourselfScript.cs" Line="9" Column="1" />
+      <File FileName="Assets\Scripts\TentacleScript.cs" Line="18" Column="40" />
+      <File FileName="Assets\Scripts\MonsterScript.cs" Line="85" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\MyDocs\Documents\GitHub\LD31\Krunch\Assets\Scripts\MonsterScript.cs" line="85" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

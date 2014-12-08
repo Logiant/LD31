@@ -6,10 +6,6 @@ public class KillYourselfScript : MonoBehaviour {
 	void Start(){
 		fader = GameObject.Find("Fader").GetComponent<FaderScript>();
 	}
-	void Update(){
-		if(fader.gameOver)
-			Application.LoadLevel (0);
-	}
 
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.CompareTag (Tags.Player))

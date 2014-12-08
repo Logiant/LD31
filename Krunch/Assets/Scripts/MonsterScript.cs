@@ -47,7 +47,7 @@ public class MonsterScript : MonoBehaviour {
 			}else if(!hasTarget){ // if no hit and no target, find new target and start moving
 				PickTarget();
 				distance = desiredPosition - transform.position;
-				float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed * Time.deltaTime);
+				float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
 				transform.position += (vel * distance.normalized);
 				tentacle.follow (new Vector3(eyePos.position.x + 15, eyePos.position.y));
 				hasTarget = true;

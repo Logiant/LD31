@@ -4,6 +4,7 @@ using System.Collections;
 public class TentacleScript : MonoBehaviour {
 
 	public bool punching;
+	public FaderScript fader;
 	bool hit;
 	Vector3 targetLocation;
 	Vector3 returnLocation;
@@ -15,7 +16,7 @@ public class TentacleScript : MonoBehaviour {
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag (Tags.Player)) {
-			Application.LoadLevel(0);
+			fader.FadeOut();
 		}
 	}
 	// Update is called once per frame
