@@ -11,10 +11,12 @@ public class LootableScript : MonoBehaviour {
 	float cooldown;
 	bool looting;
 	GameObject lootMenu;
+	PlayerController character;
 
 	void Awake() {
 		lootScript = GameObject.Find ("LootBar").GetComponent<LootProgressScript>();
 		lootMenu = GameObject.Find ("LootMenu");
+		character = GameObject.FindWithTag (Tags.Player).GetComponent<PlayerController> ();;
 	}
 
 	void Start(){
@@ -29,6 +31,7 @@ public class LootableScript : MonoBehaviour {
 		}
 		if (ready && Input.GetKeyUp (KeyCode.F) && !looting) {
 			looting = true;
+			character.looting = true;
 			cooldown = lootTime;
 			lootScript.Loot (lootTime);
 		}
@@ -40,6 +43,7 @@ public class LootableScript : MonoBehaviour {
 				// re-enable player control
 				player.GiveItem(contained);
 				contained = new GameObject[0];
+				character.looting = false;
 			}
 		}
 	}
