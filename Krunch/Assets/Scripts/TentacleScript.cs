@@ -3,12 +3,15 @@ using System.Collections;
 
 public class TentacleScript : MonoBehaviour {
 
+	public PlayerInventoryScript player;
+	GameObject chopper;
 	public bool punching;
 	public FaderScript fader;
 	bool hit;
 	Vector3 targetLocation;
 	Vector3 returnLocation;
 	public float speed = 5;
+	bool kopter;
 
 	float range = -8.25f;
 
@@ -16,6 +19,7 @@ public class TentacleScript : MonoBehaviour {
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag (Tags.Player)) {
+			Destroy (GameObject.Find("2D Character"));
 			fader.FadeOut();
 		}
 	}
@@ -36,6 +40,9 @@ public class TentacleScript : MonoBehaviour {
 				Debug.Log ("Tentacle returned");
 			}
 		}
+		if(!punching && kopter){
+			targetLocation = chopper.transform.position;
+		}
 	}
 
 	public void follow(Vector3 position) {
@@ -51,5 +58,9 @@ public class TentacleScript : MonoBehaviour {
 			targetLocation = new Vector3 (range,target.y, 0);
 			returnLocation = this.transform.position;
 		}
+	}
+
+	public void krushKopter(){
+		kopter = true;
 	}
 }

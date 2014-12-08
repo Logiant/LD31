@@ -5,6 +5,7 @@ public class ChopperScript : MonoBehaviour {
 
 
 	public PlayerInventoryScript player;
+	TentacleScript tentacle;
 	bool ready;
 	FaderScript fader;
 
@@ -17,6 +18,7 @@ public class ChopperScript : MonoBehaviour {
 			if (player.chopperKey) { //if the player has the chopper key
 				Destroy(player.gameObject); //put the player in the chopper and fly
 				//you win! fade the screen out
+				tentacle.krushKopter();
 				fader.FadeOut();
 			}
 		}
