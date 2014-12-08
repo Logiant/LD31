@@ -11,6 +11,7 @@ public class ChopperScript : MonoBehaviour {
 
 	void Start(){
 		fader = GameObject.Find("Fader").GetComponent<FaderScript>();
+		tentacle = GameObject.Find ("Tentacle").GetComponent <TentacleScript> ();
 	}
 
 	void Update() {
@@ -19,7 +20,6 @@ public class ChopperScript : MonoBehaviour {
 				Destroy(player.gameObject); //put the player in the chopper and fly
 				//you win! fade the screen out
 				tentacle.krushKopter();
-				fader.FadeOut();
 			}
 		}
 	}

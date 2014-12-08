@@ -2057,6 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0c5b9bb6665c0438215f47ba83186e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   punching: 0
   fader: {fileID: 1012840440}
   speed: 50

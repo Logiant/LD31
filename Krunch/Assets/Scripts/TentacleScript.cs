@@ -34,6 +34,8 @@ public class TentacleScript : MonoBehaviour {
 				targetLocation = returnLocation;
 				hit = true;
 				Debug.Log ("hit");
+				if(kopter)
+					fader.FadeOut();
 			}else if ((targetLocation - transform.position).sqrMagnitude <=	0.1f && hit){
 				punching = false;
 				hit = false;
@@ -42,6 +44,9 @@ public class TentacleScript : MonoBehaviour {
 		}
 		if(!punching && kopter){
 			targetLocation = chopper.transform.position;
+			this.transform.position = new Vector3(35,2,0);
+			this.transform.rotation = Quaternion.Euler (0,0,-45);
+			punching = true;
 		}
 	}
 
@@ -61,6 +66,7 @@ public class TentacleScript : MonoBehaviour {
 	}
 
 	public void krushKopter(){
+		chopper = GameObject.Find ("Helicopter");
 		kopter = true;
 	}
 }
