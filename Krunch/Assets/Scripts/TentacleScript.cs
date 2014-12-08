@@ -45,7 +45,7 @@ public class TentacleScript : MonoBehaviour {
 		if(!punching && kopter){
 			targetLocation = chopper.transform.position;
 			this.transform.position = new Vector3(35,2,0);
-			this.transform.rotation = Quaternion.Euler (0,0,-45);
+			this.transform.rotation = Quaternion.Euler (0,0,-30);
 			punching = true;
 		}
 	}
