@@ -19,7 +19,7 @@ public class TentacleScript : MonoBehaviour {
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag (Tags.Player)) {
-			Destroy (GameObject.Find("2D Character"));
+			Destroy (other.gameObject);
 			fader.FadeOut();
 		}
 	}

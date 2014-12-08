@@ -10,7 +10,7 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: Speed
     m_Type: 1
-    m_DefaultFloat: 0
+    m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
@@ -307,6 +307,16 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 110200000}
+      second:
+      - {fileID: 110100000}
+      - {fileID: 110153920}
+      - {fileID: 110160093}
+    data:
+      first: {fileID: 110221653}
+      second:
+      - {fileID: 110141049}
+    data:
       first: {fileID: 110245400}
       second:
       - {fileID: 110159657}
@@ -314,16 +324,6 @@ StateMachine:
       first: {fileID: 110271601}
       second:
       - {fileID: 110174399}
-    data:
-      first: {fileID: 110221653}
-      second:
-      - {fileID: 110141049}
-    data:
-      first: {fileID: 110200000}
-      second:
-      - {fileID: 110100000}
-      - {fileID: 110153920}
-      - {fileID: 110160093}
     data:
       first: {fileID: 110291330}
       second:
