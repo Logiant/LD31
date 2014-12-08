@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TentacleScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WinScripts\ChopperScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\WinScripts\ChopperScript.cs" Line="22" Column="28" />
-      <File FileName="Assets\Scripts\TentacleScript.cs" Line="48" Column="53" />
+      <File FileName="Assets\Scripts\TentacleScript.cs" Line="40" Column="34" />
+      <File FileName="Assets\Scripts\WinScripts\ChopperScript.cs" Line="31" Column="17" />
       <File FileName="Assets\Scripts\FaderScript.cs" Line="43" Column="1" />
       <File FileName="Assets\Scripts\WinScripts\KillYourselfScript.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\Tags.cs" Line="13" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

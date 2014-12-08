@@ -34,8 +34,11 @@ public class TentacleScript : MonoBehaviour {
 				targetLocation = returnLocation;
 				hit = true;
 				Debug.Log ("hit");
-				if(kopter)
+				if(kopter){
+					chopper.particleSystem.Simulate(1f, true, true);
 					fader.FadeOut();
+					Debug.Log("tentacle krush");
+				}
 			}else if ((targetLocation - transform.position).sqrMagnitude <=	0.1f && hit){
 				punching = false;
 				hit = false;
