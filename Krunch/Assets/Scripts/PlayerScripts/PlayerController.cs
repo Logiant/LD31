@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	Vector3 bottom;
 	bool downward;
 
+
 	BoxCollider2D collider;
 
 	// Use this for initialization
@@ -49,13 +50,16 @@ public class PlayerController : MonoBehaviour {
 			// hidden animation
 
 		} else if (climbing) {
-			anim.SetFloat ("Speed", 1f);
+			looting = false;
+			hidden = false;
+			anim.SetFloat ("Speed", 1.5f);
+			float speed = this.speed * 3;
 			Vector3 distance;
 			if (climbing && downward) {
 				if(!atStart){
 					distance = top - transform.position;
 					if(distance.sqrMagnitude > .1){
-						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						float vel = Mathf.Min (distance.magnitude, speed * Time.fixedDeltaTime);
 						transform.position += (vel * distance.normalized);
 						transform.localScale = new Vector3(1,1,1);
 					}else{
@@ -64,7 +68,7 @@ public class PlayerController : MonoBehaviour {
 				}else if (!atEnd){
 					distance = bottom - transform.position;
 					if(distance.sqrMagnitude > .1){
-						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						float vel = Mathf.Min (distance.magnitude, speed * Time.fixedDeltaTime);
 						transform.position += (vel * distance.normalized);
 						transform.localScale = new Vector3(-1,1,1);
 					}else{
@@ -82,7 +86,7 @@ public class PlayerController : MonoBehaviour {
 				if(!atStart){
 					distance = bottom - transform.position;
 					if(distance.sqrMagnitude > .1){
-						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						float vel = Mathf.Min (distance.magnitude, speed * Time.fixedDeltaTime);
 						transform.position += (vel * distance.normalized);
 						transform.localScale = new Vector3(-1,1,1);
 					}else{
@@ -91,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 				}else if (!atEnd){
 					distance = top - transform.position;
 					if(distance.sqrMagnitude > .1){
-						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						float vel = Mathf.Min (distance.magnitude, speed * Time.fixedDeltaTime);
 						transform.position += (vel * distance.normalized);
 						transform.localScale = new Vector3(1,1,1);
 					}else{
@@ -117,7 +121,8 @@ public class PlayerController : MonoBehaviour {
 			transform.localScale = localScale;
 		}
 		rigidbody2D.velocity = new Vector2(velocity * 100, rigidbody2D.velocity.y);
-		anim.SetFloat ("Speed", Mathf.Abs (velocity) / Time.deltaTime);
+		if (!climbing)
+			anim.SetFloat ("Speed", Mathf.Abs (velocity) / Time.deltaTime);
 		anim.SetBool ("Loot", looting);
 		anim.SetBool ("Hide", hidden);
 	}

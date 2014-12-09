@@ -15,10 +15,17 @@ public class TentacleScript : MonoBehaviour {
 
 	float range = -8.25f;
 
+	AudioSource audio;
+
+	void Awake() {
+			audio = GetComponent<AudioSource> ();
+	}
+
 
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag (Tags.Player)) {
+			audio.Play();
 			Destroy (other.gameObject);
 			fader.FadeOut();
 		}
@@ -35,6 +42,7 @@ public class TentacleScript : MonoBehaviour {
 				hit = true;
 				Debug.Log ("hit");
 				if(kopter){
+					audio.Play();
 					chopper.particleSystem.Simulate(1f, true, true);
 					fader.FadeOut();
 					Debug.Log("tentacle krush");
