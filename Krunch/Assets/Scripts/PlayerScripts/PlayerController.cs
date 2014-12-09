@@ -13,12 +13,30 @@ public class PlayerController : MonoBehaviour {
 	public bool hidden;
 	public bool looting;
 	public bool climbing;
+	bool atStart;
+	bool atEnd;
+	Vector3 top;
+	Vector3 bottom;
+	bool downward;
+
+	BoxCollider2D collider;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponentInChildren<Animator> ();
 		inventory = GetComponent<PlayerInventoryScript> ();
 		body = GetComponent<Rigidbody2D> ();
+		collider = GetComponent<BoxCollider2D> ();
+	}
+
+	public void startClimbing(Vector3 bottom, Vector3 top, bool downward){
+		climbing = true;
+		this.downward = downward;
+		this.top = top;
+		this.bottom = bottom;
+		body.collisionDetectionMode = CollisionDetectionMode2D.None;
+		body.gravityScale = 0;
+		collider.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -30,8 +48,64 @@ public class PlayerController : MonoBehaviour {
 		} else if (hidden) {
 			// hidden animation
 
-	//	} else if (climbing) {
-
+		} else if (climbing) {
+			Vector3 distance;
+			if (climbing && downward) {
+				if(!atStart){
+					distance = top - transform.position;
+					if(distance.sqrMagnitude > .1){
+						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						transform.position += (vel * distance.normalized);
+						transform.localScale = new Vector3(1,1,1);
+					}else{
+						atStart = true;
+					}
+				}else if (!atEnd){
+					distance = bottom - transform.position;
+					if(distance.sqrMagnitude > .1){
+						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						transform.position += (vel * distance.normalized);
+						transform.localScale = new Vector3(-1,1,1);
+					}else{
+						atEnd = true;
+					}
+				}else{
+					climbing = false;
+					atStart = false;
+					atEnd = false;
+					body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+					body.gravityScale = 3;
+					collider.enabled = true;
+				}
+			}else if(climbing && !downward){
+				Debug.Log ("start "+atStart+" end "+atEnd);
+				if(!atStart){
+					distance = bottom - transform.position;
+					if(distance.sqrMagnitude > .1){
+						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						transform.position += (vel * distance.normalized);
+						transform.localScale = new Vector3(-1,1,1);
+					}else{
+						atStart = true;
+					}
+				}else if (!atEnd){
+					distance = top - transform.position;
+					if(distance.sqrMagnitude > .1){
+						float vel = Mathf.Min (distance.magnitude * Time.deltaTime, speed);
+						transform.position += (vel * distance.normalized);
+						transform.localScale = new Vector3(1,1,1);
+					}else{
+						atEnd = true;
+					}
+				}else{
+					climbing = false;
+					atStart = false;
+					atEnd = false;
+					body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+					body.gravityScale = 3;
+					collider.enabled = true;
+				}
+			}
 		} else {
 			velocity = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 			if (velocity > 0) {
@@ -43,7 +117,6 @@ public class PlayerController : MonoBehaviour {
 			transform.localScale = localScale;
 		}
 		rigidbody2D.velocity = new Vector2(velocity * 100, rigidbody2D.velocity.y);
-		Debug.Log (velocity);
 		anim.SetFloat ("Speed", Mathf.Abs (velocity) / Time.deltaTime);
 		anim.SetBool ("Loot", looting);
 		anim.SetBool ("Hide", hidden);

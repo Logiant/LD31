@@ -7,11 +7,13 @@ public class StairScript : MonoBehaviour {
 	
 	Transform top; //top region of the stiars
 	Transform bottom; //bottom region of the stairs
+	PlayerController controller;
 
 	// Use this for initialization
 	void Awake () {
 		top = transform.Find ("HighPosition").transform; //this is a child game object
 		bottom = transform.Find ("LowPosition").transform; //this is a child game object
+		controller = GameObject.FindWithTag (Tags.Player).GetComponent<PlayerController> ();
 	}
 	
 	// Update is called once per frame
@@ -19,15 +21,7 @@ public class StairScript : MonoBehaviour {
 		//if we are in transit, move the player. If we just finished, reenable the player
 	}
 
-	public void tutorial() {
-		player.GetComponent<PlayerInventoryScript> ().Say ("Press W and S to use stairs");
-	}
-
 	public void UseStairs(bool downward) { //called from child
-		if (downward) {
-			player.position = new Vector3(bottom.position.x, bottom.position.y + 0.5f); //set bool descending = true;
-		} else {
-			player.position = new Vector3(top.position.x, top.position.y + 0.5f); //set bool ascending = true;
-		}
+		controller.startClimbing (bottom.position, top.position, downward);
 	}
 }
