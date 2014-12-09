@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 		this.bottom = bottom;
 		body.collisionDetectionMode = CollisionDetectionMode2D.None;
 		body.gravityScale = 0;
-		collider.enabled = false;
+		collider.isTrigger = true;
 	}
 	
 	// Update is called once per frame
@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour {
 			// hidden animation
 
 		} else if (climbing) {
+			anim.SetFloat ("Speed", 1f);
 			Vector3 distance;
 			if (climbing && downward) {
 				if(!atStart){
@@ -75,10 +76,9 @@ public class PlayerController : MonoBehaviour {
 					atEnd = false;
 					body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 					body.gravityScale = 3;
-					collider.enabled = true;
+					collider.isTrigger = false;
 				}
-			}else if(climbing && !downward){
-				Debug.Log ("start "+atStart+" end "+atEnd);
+			}else if(climbing && !downward){;
 				if(!atStart){
 					distance = bottom - transform.position;
 					if(distance.sqrMagnitude > .1){
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour {
 					atEnd = false;
 					body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 					body.gravityScale = 3;
-					collider.enabled = true;
+					collider.isTrigger = false;
 				}
 			}
 		} else {
