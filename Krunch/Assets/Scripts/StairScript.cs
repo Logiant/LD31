@@ -22,7 +22,7 @@ public class StairScript : MonoBehaviour {
 	}
 
 	public void UseStairs(bool downward) { //called from child
-		if(!controller.climbing){
+		if(!controller.climbing && !controller.hidden){
 			controller.startClimbing (bottom.position, top.position, downward);
 			Debug.Log (this.name);
 		}

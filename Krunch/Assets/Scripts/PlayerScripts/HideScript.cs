@@ -24,14 +24,14 @@ public class HideScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (ready && Input.GetKeyUp (KeyCode.E) && !hiding) { // player can hide, is not hiding and presses to hide
+		if (ready && Input.GetButtonUp ("Hide") && !hiding) { // player can hide, is not hiding and presses to hide
 			hiding = true;
 			Debug.Log ("Hiding");
 			player.layer = 2; // layer 2 is Ignore Raycast layer
 			controller.hidden = true;
 			// set player state to hiding
 		}
-		else if (hiding && Input.GetKeyUp (KeyCode.E)) { // player is hiding and presses to leave hide
+		else if (hiding && Input.GetButtonUp ("Hide")) { // player is hiding and presses to leave hide
 			hiding = false;
 			Debug.Log ("Stop Hiding");
 			controller.hidden = false;

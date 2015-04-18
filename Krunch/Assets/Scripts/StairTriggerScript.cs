@@ -21,9 +21,9 @@ public class StairTriggerScript : MonoBehaviour {
 
 	void Update() {
 		if (ready){ //if we are in the zone and press action
-				if (top && Input.GetKeyDown (KeyCode.S))
+				if (top && Input.GetAxis ("Vertical") < -0.5)
 						parent.UseStairs (top); //tell the parent we're ready!
-			else if (!top && Input.GetKeyDown (KeyCode.W))
+			else if (!top && Input.GetAxis ("Vertical") > 0.5)
 						parent.UseStairs (top);
 		}
 	}

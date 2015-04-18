@@ -29,7 +29,7 @@ public class LootableScript : MonoBehaviour {
 			looting = false;
 			lootScript.interrupt();
 		}
-		if (ready && Input.GetKeyUp (KeyCode.F) && !looting) {
+		if (ready && Input.GetButtonUp ("Loot") && !looting) {
 			looting = true;
 			character.looting = true;
 			cooldown = lootTime;

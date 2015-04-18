@@ -11,7 +11,7 @@ public class DoorScript : MonoBehaviour {
 	bool ready; //object is ready to be used
 	
 	void Update() {
-		if (Input.GetKeyDown (KeyCode.F) && ready) { //if we can be used and action was pressed
+		if (Input.GetButtonUp ("Loot") && ready) { //if we can be used and action was pressed
 			Debug.Log ("Attempting Door");
 			if (roof) { //check for a matching key
 				if (player.roofKey)
